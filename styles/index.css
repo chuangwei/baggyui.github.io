@@ -1,0 +1,85 @@
+/* body */
+.doc {
+  padding-top: 61px;
+}
+
+/* header */
+#header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  box-sizing: border-box;
+  padding: 0 60px;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #fff;
+  box-shadow: 0 0 1px rgba(0,0,0,0.25);
+}
+
+#logo img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  width: 40px;
+  height: 40px;
+}
+
+#nav {
+  float: right;
+  font-size: 0;
+}
+
+#nav li {
+  display: inline-block;
+  vertical-align: middle;
+  width: 75px;
+  height: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #1f2d3d;
+}
+
+#main {
+  position: relative;
+  padding: 0 60px 30px;
+}
+
+#main .sidebar {
+  position: fixed;
+  z-index: 3;
+  top: 61px;
+  left: 0;
+  bottom: 0;
+  padding: 40px 0 30px 60px;
+  width: 260px;
+  margin-right: 20px;
+  background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+#main .content {
+  position: relative;
+  padding: 2.2em 0;
+  min-width: 800px;
+  margin: 0 auto;
+  margin-left: 280px;
+}
+
+/* test code */
+.sidebar-test li {
+  color: #1f2d3d;
+  line-height: 50px;
+}
+
+.content h2 {
+  font-size: 30px;
+  line-height: 100px;
+}
+
+.content p {
+  font-size: 20px;
+  line-height: 50px;
+}
