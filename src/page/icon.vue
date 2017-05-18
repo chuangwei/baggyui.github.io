@@ -48,6 +48,40 @@
         <p>通过<code>size</code>属性可以定义图标的字体大小，通过<code>color</code>属性可以定义图标的颜色。</p>
       </template>
     </ba-demo>
+
+    <h3>Props</h3>
+    <div class="api">
+      <table>
+        <thead>
+          <tr>
+            <th>属性</th>
+            <th>说明</th>
+            <th>类型</th>
+            <th>默认值</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>type</td>
+            <td>图标类型</td>
+            <td>String</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>size</td>
+            <td>设置图标字体大小</td>
+            <td>Number</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>color</td>
+            <td>设置图标的颜色</td>
+            <td>String</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
 

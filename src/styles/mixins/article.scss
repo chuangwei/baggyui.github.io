@@ -50,4 +50,41 @@
       line-height: 1.7;
     }
   }
+
+  .api {
+    table {
+      width: 100%;
+    }
+
+    thead {
+      background-color: #eef1f6;
+    }
+
+    th, td {
+      box-sizing: border-box;
+      height: 35px;
+      overflow: hidden;
+      padding: 8px 18px;
+      font-size: 14px;
+      color: #5e6d82;
+      text-align: left;
+      line-height: 1.8;
+      border: 1px solid #dfe6ec;
+
+      code {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #e6effb;
+        margin: 0 3px;
+        padding: 0 5px;
+        line-height: 1.7;
+      }
+    }
+
+    th {
+      color: #5c6b77;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+  }
 }

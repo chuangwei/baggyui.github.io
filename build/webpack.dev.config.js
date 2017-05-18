@@ -1,10 +1,10 @@
-var path = require('path')
-var webpack = require('webpack')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var OpenBrowserPlugin = require('open-browser-webpack-plugin')
+var path = require('path');
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
-function resolve (dir) {
-  return path.join(__dirname, dir)
+function resolve(dir) {
+  return path.join(__dirname, '..', dir);
 }
 
 module.exports = {
@@ -18,7 +18,7 @@ module.exports = {
     ]
   },
   output: {
-    path: path.join(__dirname, './dist'),
+    path: path.join(__dirname, '../dist'),
     publicPath: '/',
     filename: '[name].js'
   },
@@ -26,7 +26,6 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        exclude: /node_modules/,
         exclude: /node_modules/,
         loader: 'eslint-loader',
         enforce: 'pre',
@@ -92,14 +91,14 @@ module.exports = {
       name: 'vendor',
       filename: 'vendor.js'
     }),
-    new HtmlWebpackPlugin({
-      filename: './index.html',
-      template: './src/index.html',
-      inject: 'body'
-    }),
     new webpack.HotModuleReplacementPlugin(),
     new OpenBrowserPlugin({ 
       url: 'http://localhost:8080' 
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: path.join(__dirname, '../src/index.html'),
+      inject: 'body'
     })
   ]
 }

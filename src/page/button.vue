@@ -63,6 +63,40 @@
         <p>可以使用<code>loading</code>属性来定义按钮的加载状态，它接受一个<code>Boolean</code>值。</p>
       </template>
     </ba-demo>
+
+    <h3>Props</h3>
+    <div class="api">
+      <table>
+        <thead>
+          <tr>
+            <th>属性</th>
+            <th>说明</th>
+            <th>类型</th>
+            <th>默认值</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>type</td>
+            <td>按钮类型，可选值为<code>primary</code>、<code>text</code>、<code>success</code>、<code>warning</code>、<code>danger</code>、<code>info</code>或者不设置</td>
+            <td>String</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>disabled</td>
+            <td>设置按钮为禁用状态</td>
+            <td>Boolean</td>
+            <td>false</td>
+          </tr>
+          <tr>
+            <td>loading</td>
+            <td>设置按钮为加载中状态</td>
+            <td>Boolean</td>
+            <td>false</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
 
