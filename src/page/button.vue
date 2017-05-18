@@ -3,7 +3,7 @@
     <h2>按钮 Button</h2>
     <p>常用的操作按钮。</p>
 
-    <h3>基础用法</h3>
+    <h3>使用方法</h3>
     <p>基础的按钮用法。</p>
     <ba-demo>
       <template slot="source">

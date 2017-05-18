@@ -2,7 +2,6 @@ var path = require('path')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var OpenBrowserPlugin = require('open-browser-webpack-plugin')
-var ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 function resolve (dir) {
   return path.join(__dirname, dir)
@@ -28,15 +27,17 @@ module.exports = {
       {
         test: /\.vue$/,
         exclude: /node_modules/,
+        exclude: /node_modules/,
         loader: 'eslint-loader',
         enforce: 'pre',
-        include: [resolve('src'), resolve('examples')],
+        include: [resolve('src')],
         options: {
           formatter: require('eslint-friendly-formatter')
         }
       },
       {
         test: /\.vue$/,
+        exclude: /node_modules/,
         loader: 'vue-loader',
         options: {
           loaders: {
@@ -51,12 +52,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [{
-            loader: 'css-loader'
-          }]
-        })
+        use: [{
+          loader: 'style-loader'
+        }, {
+          loader: 'css-loader'
+        }]
       },
       {
         test: /\.scss$/,
@@ -82,14 +82,12 @@ module.exports = {
     }
   },
   devServer: {
-    contentBase: './',
     historyApiFallback: true,
     inline: true,
     hot: true
   },
   devtool: '#eval-source-map',
   plugins: [
-    new ExtractTextPlugin('index.css'),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       filename: 'vendor.js'
@@ -99,9 +97,7 @@ module.exports = {
       template: './src/index.html',
       inject: 'body'
     }),
-    new webpack.HotModuleReplacementPlugin({
-      multiStep: true
-    }),
+    new webpack.HotModuleReplacementPlugin(),
     new OpenBrowserPlugin({ 
       url: 'http://localhost:8080' 
     })

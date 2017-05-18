@@ -4,7 +4,7 @@
   top: 61px;
   left: 0;
   bottom: 0;
-  padding: 40px 0 30px 60px;
+  padding: 30px 0 30px 60px;
   width: 260px;
   margin-right: 20px;
   background-color: #fff;
@@ -27,4 +27,14 @@
 .sidebar-test li {
   color: #1f2d3d;
   line-height: 50px;
+
+  a {
+    color: #1f2d3d;
+    transition: all 0.2s ease;
+
+    &.router-link-active,
+    &:hover {
+      color: #20a0ff;
+    }
+  }
 }

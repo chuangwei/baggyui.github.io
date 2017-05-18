@@ -6,7 +6,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "baggyui": "^1.0.0",
+    "baggyui": "^1.0.2",
     "highlightjs": "^9.10.0",
     "vue": "^2.2.6",
     "vue-router": "^2.2.1"
