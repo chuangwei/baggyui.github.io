@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import router from './routers';
+import router from './router';
 import baggyui from 'baggyui';
 import App from './App';
 
